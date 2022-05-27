@@ -5,252 +5,185 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전시회</title>
-    <style>
-        @import url(css/index.css);
-    </style>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript">
-        function winPopup() {
-            var popUrl = "login.html";
-            var popOption = "top=10, left=10, width=500px, height=500px, status=no, menubar=no, toolbar=no, resizable=no";
-            window.open(popUrl, popOption, '_blank');
-        }
-    </script>
-
+    <title>Review Archive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header id="header">
-        <section class="topbar">
-            <div class="headertitle">
-                <h1>MOONLIGHT 전시회</h1>
-                <a class="toptitle"></a>
-                <button href="#menu" class="menu button menuopen">  <i class="material-icons">menu</i></button>
-            </div>
-            <div class="toplink">
-                <div>
-                    <button href="javascript:void(0);" class="popupopen" onclick="winPopup();">로그인</button>
-                    <button>회원가입</button>
-                </div>
-            </div>
-        </section>
-        <section id="menu" class="bottombar">
-            <nav class="nav">
-                <ul>
-                    <li>
-                        <a href="#;" title="공지사항 이동"></a>
-                        <span>공지사항</span>
-                    </li>
-                    <li>
-                        <a href="#;" title="자유게시판 이동"></a>
-                        <span>자유게시판</span>
-                    </li>
-                    <li>
-                        <a href="#;" title="갤러리 이동"></a>
-                        <span>갤러리</span>
-                    </li>
-                </ul>
-            </nav>
 
-            <form id="searchbar">
-                <div class="search">
-                    <div>
-                        <input type="search">
-                    </div>
-                    <button>검색</button>
-                </div>
-            </form>
-        </section>
-    </header>
-    <main id="main">
-        <section class="alert">
-            <div class="headerimg">
-                <img src="images/headerimg.png">
-                <h2>전시회 안내</h2>
-            </div>
-            <div class="board">
-                <div class="forumboard">
-                    <div class="forumtitle">
-                        <h3>공지사항</h3>
-                        <a href="#;" title="공지사항 더보기">더보기</a>
-                    </div>
-                    <div class="forumbody">
-                        <dl>
-                            <dt class="forumli">
-                                <span class="badge"><strong>필독</strong></span>
-                                <a href="#;">전시회 정보</a>
-                                <span>1.04</span>
-                            </dt>
-                            <dt class="forumli">
-                                <span class="badge"><strong>필독</strong></span>
-                                <a href="#;">전시관 위치 변경</a>
-                                <span>1.22</span>
-                            </dt>
-                            <dt class="forumli">
-                                <a href="#;">3월 전시 작품 안내</a>
-                                <span>3.02</span>
-                            </dt>
-                            <dt class="forumli">
-                                <a href="#;">2월 전시 작품 안내</a>
-                                <span>2.02</span>
-                            </dt>
-                        </dl>
-                    </div>
-                </div>
+    <div id="about"></div>
+    <div id="header"></div>
+    <div class="container-fluid" id="maincont">
+        <div id="maincarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- slide 1 -->
+                <div class="carousel-item active">
+                    <div class="container-fluid d-flex justify-content-center">
 
-                <div class="forumboard">
-                    <div class="forumtitle">
-                        <h3>자유게시판</h3>
-                        <a href="#;" title="자유게시판 더보기">더보기</a>
-                    </div>
-                    <div class="forumbody">
-                        <dl>
-                            <dt class="forumli">
-                                <span>후기</span>
-                                <a href="#;">달빛 전시회 방문 후기</a>
-                                <span>3.05</span>
-                            </dt>
-                            <dt class="forumli">
-                                <span>후기</span>
-                                <a href="#;">전시회 리뷰: [MOONLIGHT 전시회]</a>
-                                <span>2.21</span>
-                            </dt>
-                            <dt class="forumli">
-                                <span>문의</span>
-                                <a href="#;">전시회 기간은 어떻게 되나요?</a>
-                                <span>2.13</span>
-                            </dt>
-                            <dt class="forumli">
-                                <span>후기</span>
-                                <a href="#;">'Moonlight 전시회' 관람 후기 + 전시회 방문 꿀팁</a>
-                                <span>1.11</span>
-                            </dt>
-                        </dl>
-                    </div>
+                        <div class="row d-flex justify-content-center">
+                            <!-- card 1 -->
+                            <div class="col-7 col-sm-4">
+                                <a href="">
+                                    <div class="card">
+                                        <div class="container d-flex cardpic " ">
+                <img src="https://source.unsplash.com/random/400x400?a " class="card-img-top " alt="... ">
+                
+            </div>
+                <div class="card-body text-center justify-content-center ">
+                    <p class="card-text "><span class="cardtitle ">title</span><i class="bi bi-play-circle "></i>
                 </div>
             </div>
-        </section>
-        <section class="gallery">
-            <div class="forumboard">
-                <div class="forumtitle">
-                    <h3>갤러리</h3>
-                    <a href="#;" title="갤러리 더보기">더보기</a>
-                </div>
-                <div class="forumgallery">
+        </a>
+        </div>
+    <!-- card 2 -->
+                <div class="col-7 col-sm-4 ">
+                    <a href=" ">
+                    <div class="card ">
+                            <div class="container d-flex cardpic ">
+                                <img src="https://source.unsplash.com/random/400x400 " class="card-img-top " alt="... ">
+                                
+                            </div>
+                            <div class="card-body text-center ">
+                                <p class="card-text "><span class="cardtitle ">title</span><i class="bi bi-play-circle "></i>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+    <!-- card 3 -->
+                    <div class="col-7 col-sm-4 ">
+                        <a href=" ">
+                        <div class="card " ">
 
-                    <div class="forumli">
-                        <a href="#;" title="갤러리 이동">갤러리 이동</a>
-                        <div class="item">
-                            <div class="galleryimg">
-                                <img src="images/img1.png" />
+                                            <div class="container d-flex cardpic ">
+                                                <img src="https://source.unsplash.com/random/400x400 " class="card-img-top " alt="... ">
+
+                                            </div>
+                                            <div class="card-body text-center ">
+                                                <p class="card-text "><span class="cardtitle ">title</span><i class="bi bi-play-circle "></i>
+                                            </div>
+                                        </div>
+                                </a>
+                                </div>
                             </div>
-                            <dl class="galleryinfo">
-                                <dt class="title"><span class="gallerytitle">작품</span><h4 class="itemtitle">제목 1</h4></dt>
-                                <dt class="etc gallerytitle">
-                                    <p>
-                                        <span>작성자</span>
-                                    </p>
-                                    <p>1.04</p>
-                                </dt>
-                            </dl>
                         </div>
                     </div>
-                    <div class="forumli">
-                        <a href="#;" title="갤러리 이동">갤러리 이동</a>
-                        <div class="item">
-                            <div class="galleryimg">
-                                <img src="images/img2.png" />
+                    <!-- slide 2 -->
+                    <div class="carousel-item">
+                        <div class="container-fluid d-flex justify-content-center">
+
+                            <div class="row d-flex justify-content-center">
+                                <!-- card 4 -->
+                                <div class="col-7 col-sm-4">
+                                    <a href="">
+                                    <div class="card" ">
+                    <div class="container d-flex cardpic ">
+                    <img src="https://source.unsplash.com/random/400x400?b " class="card-img-top " alt="... ">
+                    
+                </div>
+                    <div class="card-body text-center justify-content-center ">
+                        <p class="card-text "><span class="cardtitle ">title</span><i class="bi bi-play-circle "></i>
+                    </div>
+                </div>
+            </a>
+                                </div>
+                                <!-- card 5 -->
+                                <div class="col-7 col-sm-4 ">
+                                    <a href=" ">
+                                        <div class="card ">
+                                            <div class="container d-flex cardpic ">
+                                                <img src="https://source.unsplash.com/random/400x400?c " class="card-img-top " alt="... ">
+
+                                            </div>
+                                            <div class="card-body text-center ">
+                                                <p class="card-text "><span class="cardtitle ">title</span><i class="bi bi-play-circle "></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- card 6 -->
+                                <div class="col-7 col-sm-4 ">
+                                    <a href=" ">
+                            <div class="card " ">
+                                        <div class="container d-flex cardpic ">
+                                            <img src="https://source.unsplash.com/random/400x400 " class="card-img-top " alt="... ">
+
+                                        </div>
+                                        <div class="card-body text-center ">
+                                            <p class="card-text "><span class="cardtitle ">title</span><i class="bi bi-play-circle "></i>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
                             </div>
-                            <dl class="galleryinfo">
-                                <dt class="title"><span class="gallerytitle">작품</span><h4 class="itemtitle">제목 2</h4></dt>
-                                <dt class="etc gallerytitle">
-                                    <p>
-                                        <span>작성자</span>
-                                    </p>
-                                    <p>1.04</p>
-                                </dt>
-                            </dl>
                         </div>
                     </div>
-                    <div class="forumli">
-                        <a href="#;" title="갤러리 이동">갤러리 이동</a>
-                        <div class="item">
-                            <div class="galleryimg">
-                                <img src="images/img3.png" />
-                            </div>
-                            <dl class="galleryinfo">
-                                <dt class="title"><span class="gallerytitle">작품</span><h4 class="itemtitle">제목 3</h4></dt>
-                                <dt class="etc gallerytitle">
-                                    <p>
-                                        <span>작성자</span>
-                                    </p>
-                                    <p>1.04</p>
-                                </dt>
-                            </dl>
-                        </div>
+                    <!-- slide 3 -->
+                    <div class="carousel-item">
+                        <div class="container-fluid d-flex justify-content-center">
+
+                            <div class="row d-flex justify-content-center">
+                                <!-- card 7 -->
+                                <div class="col-7 col-sm-4">
+                                    <a href="">
+                                    <div class="card" ">
+                    <div class="container d-flex cardpic ">
+                    <img src="https://source.unsplash.com/random/400x400 " class="card-img-top " alt="... ">
+                    
+                </div>
+                    <div class="card-body text-center justify-content-center ">
+                        <p class="card-text "><span class="cardtitle ">title</span><i class="bi bi-play-circle "></i>
                     </div>
-                    <div class="forumli">
-                        <a href="#;" title="갤러리 이동">갤러리 이동</a>
-                        <div class="item">
-                            <div class="galleryimg">
-                                <img src="images/img4.png" />
+                </div>
+            </a>
+                                </div>
+                                <!-- card 8 -->
+                                <div class="col-7 col-sm-4 ">
+                                    <a href="">
+                                        <div class="card ">
+                                            <div class="container d-flex cardpic ">
+                                                <img src="https://source.unsplash.com/random/400x400 " class="card-img-top " alt="... ">
+
+                                            </div>
+                                            <div class="card-body text-center ">
+                                                <p class="card-text "><span class="cardtitle ">title</span><i class="bi bi-play-circle "></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- card 9 -->
+                                <div class="col-7 col-sm-4 ">
+                                    <a href="">
+                            <div class="card " ">
+                                        <div class="container d-flex cardpic ">
+                                            <img src="https://source.unsplash.com/random/400x400 " class="card-img-top " alt="... ">
+
+                                        </div>
+                                        <div class="card-body text-center ">
+                                            <p class="card-text "><span class="cardtitle ">title</span><i class="bi bi-play-circle "></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                </div>
                             </div>
-                            <dl class="galleryinfo">
-                                <dt class="title"><span class="gallerytitle">작품</span><h4 class="itemtitle">제목 4</h4></dt>
-                                <dt class="etc gallerytitle">
-                                    <p>
-                                        <span>작성자</span>
-                                    </p>
-                                    <p>1.04</p>
-                                </dt>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="forumli">
-                        <a href="#;" title="갤러리 이동">갤러리 이동</a>
-                        <div class="item">
-                            <div class="galleryimg">
-                                <img src="images/img5.png" />
-                            </div>
-                            <dl class="galleryinfo">
-                                <dt class="title"><span class="gallerytitle">작품</span><h4 class="itemtitle">제목 5</h4></dt>
-                                <dt class="etc gallerytitle">
-                                    <p>
-                                        <span>작성자</span>
-                                    </p>
-                                    <p>1.04</p>
-                                </dt>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="forumli">
-                        <a href="#;" title="갤러리 이동">갤러리 이동</a>
-                        <div class="item">
-                            <div class="galleryimg">
-                                <img src="images/img6.png" />
-                            </div>
-                            <dl class="galleryinfo">
-                                <dt class="title"><span class="gallerytitle">작품</span><h4 class="itemtitle">제목 6</h4></dt>
-                                <dt class="etc gallerytitle">
-                                    <p>
-                                        <span>작성자</span>
-                                    </p>
-                                    <p>1.04</p>
-                                </dt>
-                            </dl>
                         </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#maincarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#maincarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
             </div>
-        </section>
-    </main>
-    <footer id="footer">
-        <p class="copy">
-            Copyright © 2021
-        </p>
-    </footer>
 
+        </div>
+        <div id="footer"></div>
 </body>
 
 </html>
